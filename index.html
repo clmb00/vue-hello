@@ -13,7 +13,7 @@
     <p>Bentornato <strong :class="accentColor">{{name}} {{surname}}</strong>, quale immagine ti rappresenta <strong :class="accentColor">oggi</strong> ?</p>
     <button @click="changeColor('red')" class="btnColor red"></button>
     <button @click="changeColor('green')" class="btnColor green"></button>
-    <button @click="changeColor('blue')" class="btnColor blue"></button>
+    <button @click="changeColor('blue')" class="btnColor blue"></button><br>
     <img :src="'./img/' + pathImg + '.jpg'" :alt="pathImg" :class="borderColor">
   </div>
 
