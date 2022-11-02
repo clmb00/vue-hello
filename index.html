@@ -11,14 +11,18 @@
 
   <div id="app">
     <p>Bentornato <strong :class="accentColor">{{name}} {{surname}}</strong>, quale immagine ti rappresenta <strong :class="accentColor">oggi</strong> ?</p>
-    <button @click="changeColor('red')" class="btnColor red"></button>
-    <button @click="changeColor('green')" class="btnColor green"></button>
-    <button @click="changeColor('blue')" class="btnColor blue"></button>
-    <div class="container_img">
+    <button @click="changeColor('red')" class="btnColor red "></button>
+    <button @click="changeColor('green')" class="btnColor green "></button>
+    <button @click="changeColor('blue')" class="btnColor blue "></button>
+    <div class="container_img" v-show="!showTextToggle">
       <img :src="'./img/' + pathArray[indexCarousel] + '.jpg'" :alt="pathArray[indexCarousel]" :class="borderColor">
-      <button class="arrows left" @click="changeCarousel(false)"> < </button>
-      <button class="arrows right" @click="changeCarousel(true)"> > </button>
+      <button class="arrows left" :class="borderColor" @click="changeCarousel(false)"> < </button>
+      <button class="arrows right" :class="borderColor" @click="changeCarousel(true)"> > </button>
     </div>
+    <div class="container_img" v-show="showTextToggle">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex obcaecati eum magni molestias natus saepe cupiditate, modi ducimus. Laborum, voluptatem. Praesentium a culpa eveniet! Voluptate delectus quisquam nemo officia hic?Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic odio facere id tempore totam distinctio esse, voluptate animi, officiis sed nam alias perspiciatis consequatur officia sunt. Debitis in a quia! Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis atque ratione reprehenderit ipsa cum nemo eveniet id praesentium mollitia sunt quia molestias eaque, impedit alias. Vitae qui voluptatum esse doloremque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui delectus illo aliquam facilis eveniet recusandae laborum enim vitae sed placeat quibusdam, nam porro explicabo? Recusandae quaerat quia facilis laboriosam dolore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam eveniet iure expedita suscipit sapiente. Qui, voluptatem! Similique voluptatibus obcaecati consequuntur doloribus unde, adipisci est, accusamus eos amet, iste cum beatae. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga expedita autem dolorum quis quaerat non optio distinctio saepe sunt adipisci sapiente odit, iusto eveniet et quas corrupti ab quasi incidunt.</p>
+    </div>
+    <button id="showTextToggle" @click="showTextToggle = !showTextToggle">Toggle text/images</button>
   </div>
 
   <script src="./js/script.js"></script>   

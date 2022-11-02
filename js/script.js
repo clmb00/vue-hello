@@ -9,7 +9,8 @@ createApp({
       accentColor: 'text_red',
       pathArray: ['blue_landscape', 'city_grey', 'cliff_sea', 'forest', 'underwater'],
       indexCarousel: 0,
-      borderColor: 'border_red'
+      borderColor: 'border_red',
+      showTextToggle: false
     }
   },
 
