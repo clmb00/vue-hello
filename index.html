@@ -4,10 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://unpkg.com/vue@3"></script>
+  <link rel="stylesheet" href="./css/style.css">
   <title>Vue Hello</title>
 </head>
 <body>
 
-  <script src="27_script.js"></script>   
+  <div id="app">
+    <p>Bentornato <strong :class="accentColor">{{name}} {{surname}}</strong>, quale immagine ti rappresenta <strong :class="accentColor">oggi</strong> ?</p>
+    <button @click="accentColor='text_red'" class="btnColor red"></button>
+    <button @click="accentColor='text_green'" class="btnColor green"></button>
+    <button @click="accentColor='text_blue'" class="btnColor blue"></button>
+    <img src="" alt="">
+  </div>
+
+  <script src="./js/script.js"></script>   
 </body>
 </html>

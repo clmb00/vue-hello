@@ -1,0 +1,59 @@
+body{
+  font-size: 2rem;
+  text-align: center;
+}
+
+p{
+  margin-bottom: 0px;
+}
+
+.light_red{
+  background-color: rgba(50, 0, 0, .2);
+}
+
+.text_red{
+  color: darkred;
+  text-shadow: 0px 0px 3px black;
+}
+
+.text_green{
+  color: darkgreen;
+  text-shadow: 0px 0px 3px black;
+}
+
+.text_blue{
+  color: darkblue;
+  text-shadow: 0px 0px 3px black;
+}
+
+.btnColor{
+  cursor: pointer;
+  height: 12px;
+  width: 200px;
+  margin: 0px 20px;
+  border-radius: 50px;
+}
+
+.btnColor:hover{
+  filter: brightness(0.8);
+}
+
+.btnColor.red{
+  background-color: darkred;
+  border-color: darkred;
+}
+
+.btnColor.green{
+  background-color: darkgreen;
+  border-color: darkgreen;
+}
+
+.btnColor.blue{
+  background-color: darkblue;
+  border-color: darkblue;
+}
+
+img{
+  width: 800px;
+  height: 800px;
+}
