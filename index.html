@@ -11,10 +11,10 @@
 
   <div id="app">
     <p>Bentornato <strong :class="accentColor">{{name}} {{surname}}</strong>, quale immagine ti rappresenta <strong :class="accentColor">oggi</strong> ?</p>
-    <button @click="accentColor='text_red'" class="btnColor red"></button>
-    <button @click="accentColor='text_green'" class="btnColor green"></button>
-    <button @click="accentColor='text_blue'" class="btnColor blue"></button>
-    <img src="" alt="">
+    <button @click="changeColor('red')" class="btnColor red"></button>
+    <button @click="changeColor('green')" class="btnColor green"></button>
+    <button @click="changeColor('blue')" class="btnColor blue"></button>
+    <img :src="'./img/' + pathImg + '.jpg'" :alt="pathImg" :class="borderColor">
   </div>
 
   <script src="./js/script.js"></script>   
